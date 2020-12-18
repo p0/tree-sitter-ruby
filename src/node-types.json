@@ -2715,6 +2715,10 @@
           "named": true
         },
         {
+          "type": "simple_symbol",
+          "named": true
+        },
+        {
           "type": "string_content",
           "named": true
         }
@@ -3533,6 +3537,10 @@
   },
   {
     "type": "self",
+    "named": true
+  },
+  {
+    "type": "simple_symbol",
     "named": true
   },
   {
