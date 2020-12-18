@@ -5550,7 +5550,7 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "_simple_symbol"
+          "name": "simple_symbol"
         },
         {
           "type": "SEQ",
@@ -6015,7 +6015,7 @@
     },
     {
       "type": "SYMBOL",
-      "name": "_simple_symbol"
+      "name": "simple_symbol"
     },
     {
       "type": "SYMBOL",

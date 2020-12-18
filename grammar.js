@@ -38,7 +38,7 @@ module.exports = grammar({
     $._line_break,
 
     // Delimited literals
-    $._simple_symbol,
+    $.simple_symbol,
     $._string_start,
     $._symbol_start,
     $._subshell_start,
@@ -818,7 +818,7 @@ module.exports = grammar({
       alias($._string_end, ')')
     ),
 
-    symbol: $ => choice($._simple_symbol, seq(
+    symbol: $ => choice($.simple_symbol, seq(
       alias($._symbol_start, ':"'),
       optional($._literal_contents),
       alias($._string_end, '"')

@@ -17,17 +17,17 @@ symbol
 ---
 
 (program
-  (symbol)
-  (symbol)
-  (symbol)
-  (symbol)
-  (symbol)
-  (symbol)
-  (symbol)
-  (symbol)
-  (symbol)
-  (symbol)
-  (symbol))
+  (symbol (simple_symbol))
+  (symbol (simple_symbol))
+  (symbol (simple_symbol))
+  (symbol (simple_symbol))
+  (symbol (simple_symbol))
+  (symbol (simple_symbol))
+  (symbol (simple_symbol))
+  (symbol (simple_symbol))
+  (symbol (simple_symbol))
+  (symbol (simple_symbol))
+  (symbol (simple_symbol)))
 
 ======
 symbol operators
@@ -63,32 +63,32 @@ symbol operators
 ---
 
 (program
-  (symbol)
-  (symbol)
-  (symbol)
-  (symbol)
-  (symbol)
-  (symbol)
-  (symbol)
-  (symbol)
-  (symbol)
-  (symbol)
-  (symbol)
-  (symbol)
-  (symbol)
-  (symbol)
-  (symbol)
-  (symbol)
-  (symbol)
-  (symbol)
-  (symbol)
-  (symbol)
-  (symbol)
-  (symbol)
-  (symbol)
-  (symbol)
-  (symbol)
-  (symbol))
+  (symbol (simple_symbol))
+  (symbol (simple_symbol))
+  (symbol (simple_symbol))
+  (symbol (simple_symbol))
+  (symbol (simple_symbol))
+  (symbol (simple_symbol))
+  (symbol (simple_symbol))
+  (symbol (simple_symbol))
+  (symbol (simple_symbol))
+  (symbol (simple_symbol))
+  (symbol (simple_symbol))
+  (symbol (simple_symbol))
+  (symbol (simple_symbol))
+  (symbol (simple_symbol))
+  (symbol (simple_symbol))
+  (symbol (simple_symbol))
+  (symbol (simple_symbol))
+  (symbol (simple_symbol))
+  (symbol (simple_symbol))
+  (symbol (simple_symbol))
+  (symbol (simple_symbol))
+  (symbol (simple_symbol))
+  (symbol (simple_symbol))
+  (symbol (simple_symbol))
+  (symbol (simple_symbol))
+  (symbol (simple_symbol)))
 
 ====================
 single quoted symbol
@@ -573,7 +573,7 @@ flash[:notice] = "Pattern addition failed for '%s' in '%s'", %
 ----
 
 (program (assignment
-  (element_reference (identifier) (symbol))
+  (element_reference (identifier) (symbol (simple_symbol)))
   (right_assignment_list (string (string_content)) (string (string_content)))))
 
 ==========================
@@ -1025,7 +1025,7 @@ array
   (array (identifier) (splat_argument (identifier)))
   (array (identifier) (splat_argument (instance_variable)))
   (array (identifier) (splat_argument (global_variable)))
-  (array (identifier) (pair (symbol) (integer))))
+  (array (identifier) (pair (symbol (simple_symbol)) (integer))))
 
 =====
 array as object
@@ -1173,7 +1173,7 @@ hash with no spaces
 
 ---
 
-(program (hash (pair (symbol) (string (string_content)))))
+(program (hash (pair (symbol (simple_symbol)) (string (string_content)))))
 
 =========================
 hash with expression keys
@@ -1236,42 +1236,42 @@ hash with reserved word key
 ---
 
 (program (hash
-  (pair (symbol) (symbol))
-  (pair (symbol) (symbol))
-  (pair (symbol) (symbol))
-  (pair (symbol) (symbol))
-  (pair (symbol) (symbol))
-  (pair (symbol) (symbol))
-  (pair (symbol) (symbol))
-  (pair (symbol) (symbol))
-  (pair (symbol) (symbol))
-  (pair (symbol) (symbol))
-  (pair (symbol) (symbol))
-  (pair (symbol) (symbol))
-  (pair (symbol) (symbol))
-  (pair (symbol) (symbol))
-  (pair (symbol) (symbol))
-  (pair (symbol) (symbol))
-  (pair (symbol) (symbol))
-  (pair (symbol) (symbol))
-  (pair (symbol) (symbol))
-  (pair (symbol) (symbol))
-  (pair (symbol) (symbol))
-  (pair (symbol) (symbol))
-  (pair (symbol) (symbol))
-  (pair (symbol) (symbol))
-  (pair (symbol) (symbol))
-  (pair (symbol) (symbol))
-  (pair (symbol) (symbol))
-  (pair (symbol) (symbol))
-  (pair (symbol) (symbol))
-  (pair (symbol) (symbol))
-  (pair (symbol) (symbol))
-  (pair (symbol) (symbol))
-  (pair (symbol) (symbol))
-  (pair (symbol) (symbol))
-  (pair (symbol) (symbol))
-  (pair (symbol) (symbol))))
+  (pair (symbol) (symbol (simple_symbol)))
+  (pair (symbol) (symbol (simple_symbol)))
+  (pair (symbol) (symbol (simple_symbol)))
+  (pair (symbol) (symbol (simple_symbol)))
+  (pair (symbol) (symbol (simple_symbol)))
+  (pair (symbol) (symbol (simple_symbol)))
+  (pair (symbol) (symbol (simple_symbol)))
+  (pair (symbol) (symbol (simple_symbol)))
+  (pair (symbol) (symbol (simple_symbol)))
+  (pair (symbol) (symbol (simple_symbol)))
+  (pair (symbol) (symbol (simple_symbol)))
+  (pair (symbol) (symbol (simple_symbol)))
+  (pair (symbol) (symbol (simple_symbol)))
+  (pair (symbol) (symbol (simple_symbol)))
+  (pair (symbol) (symbol (simple_symbol)))
+  (pair (symbol) (symbol (simple_symbol)))
+  (pair (symbol) (symbol (simple_symbol)))
+  (pair (symbol) (symbol (simple_symbol)))
+  (pair (symbol) (symbol (simple_symbol)))
+  (pair (symbol) (symbol (simple_symbol)))
+  (pair (symbol) (symbol (simple_symbol)))
+  (pair (symbol) (symbol (simple_symbol)))
+  (pair (symbol) (symbol (simple_symbol)))
+  (pair (symbol) (symbol (simple_symbol)))
+  (pair (symbol) (symbol (simple_symbol)))
+  (pair (symbol) (symbol (simple_symbol)))
+  (pair (symbol) (symbol (simple_symbol)))
+  (pair (symbol) (symbol (simple_symbol)))
+  (pair (symbol) (symbol (simple_symbol)))
+  (pair (symbol) (symbol (simple_symbol)))
+  (pair (symbol) (symbol (simple_symbol)))
+  (pair (symbol) (symbol (simple_symbol)))
+  (pair (symbol) (symbol (simple_symbol)))
+  (pair (symbol) (symbol (simple_symbol)))
+  (pair (symbol) (symbol (simple_symbol)))
+  (pair (symbol) (symbol (simple_symbol)))))
 
 ======================
 hash with keyword keys
@@ -1329,9 +1329,9 @@ hash with line breaks and inline comments
 
 (program
   (hash
-    (pair (symbol) (identifier))
+    (pair (symbol (simple_symbol)) (identifier))
     (comment)
-    (pair (symbol) (integer))))
+    (pair (symbol (simple_symbol)) (integer))))
 
 ==================
 regular expression
@@ -1487,5 +1487,5 @@ Cß
   (constant)
   (instance_variable)
   (class_variable)
-  (symbol)
+  (symbol (simple_symbol))
   (identifier))
