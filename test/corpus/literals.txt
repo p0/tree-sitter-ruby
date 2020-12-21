@@ -883,14 +883,14 @@ foo[
     receiver: (identifier)
     method: (identifier)
     arguments: (argument_list
-      (pair key: (symbol) value: (heredoc_beginning))
+      (pair key: (identifier_hash_key_symbol) value: (heredoc_beginning))
       (heredoc_body (heredoc_content) (heredoc_end))
-      (pair key: (symbol) value: (heredoc_beginning))
+      (pair key: (identifier_hash_key_symbol) value: (heredoc_beginning))
       (heredoc_body (heredoc_content) (heredoc_end))))
   (hash
-    (pair key: (symbol) value: (heredoc_beginning))
+    (pair key: (identifier_hash_key_symbol) value: (heredoc_beginning))
     (heredoc_body (heredoc_content) (heredoc_end))
-    (pair key: (symbol) value: (heredoc_beginning))
+    (pair key: (identifier_hash_key_symbol) value: (heredoc_beginning))
     (heredoc_body (heredoc_content) (heredoc_end)))
   (array (heredoc_beginning) (heredoc_body (heredoc_content) (heredoc_end)) (heredoc_beginning) (heredoc_body (heredoc_content) (heredoc_end)))
   (assignment
@@ -1236,42 +1236,42 @@ hash with reserved word key
 ---
 
 (program (hash
-  (pair (symbol) (symbol (simple_symbol)))
-  (pair (symbol) (symbol (simple_symbol)))
-  (pair (symbol) (symbol (simple_symbol)))
-  (pair (symbol) (symbol (simple_symbol)))
-  (pair (symbol) (symbol (simple_symbol)))
-  (pair (symbol) (symbol (simple_symbol)))
-  (pair (symbol) (symbol (simple_symbol)))
-  (pair (symbol) (symbol (simple_symbol)))
-  (pair (symbol) (symbol (simple_symbol)))
-  (pair (symbol) (symbol (simple_symbol)))
-  (pair (symbol) (symbol (simple_symbol)))
-  (pair (symbol) (symbol (simple_symbol)))
-  (pair (symbol) (symbol (simple_symbol)))
-  (pair (symbol) (symbol (simple_symbol)))
-  (pair (symbol) (symbol (simple_symbol)))
-  (pair (symbol) (symbol (simple_symbol)))
-  (pair (symbol) (symbol (simple_symbol)))
-  (pair (symbol) (symbol (simple_symbol)))
-  (pair (symbol) (symbol (simple_symbol)))
-  (pair (symbol) (symbol (simple_symbol)))
-  (pair (symbol) (symbol (simple_symbol)))
-  (pair (symbol) (symbol (simple_symbol)))
-  (pair (symbol) (symbol (simple_symbol)))
-  (pair (symbol) (symbol (simple_symbol)))
-  (pair (symbol) (symbol (simple_symbol)))
-  (pair (symbol) (symbol (simple_symbol)))
-  (pair (symbol) (symbol (simple_symbol)))
-  (pair (symbol) (symbol (simple_symbol)))
-  (pair (symbol) (symbol (simple_symbol)))
-  (pair (symbol) (symbol (simple_symbol)))
-  (pair (symbol) (symbol (simple_symbol)))
-  (pair (symbol) (symbol (simple_symbol)))
-  (pair (symbol) (symbol (simple_symbol)))
-  (pair (symbol) (symbol (simple_symbol)))
-  (pair (symbol) (symbol (simple_symbol)))
-  (pair (symbol) (symbol (simple_symbol)))))
+  (pair (identifier_hash_key_symbol) (symbol (simple_symbol)))
+  (pair (identifier_hash_key_symbol) (symbol (simple_symbol)))
+  (pair (identifier_hash_key_symbol) (symbol (simple_symbol)))
+  (pair (identifier_hash_key_symbol) (symbol (simple_symbol)))
+  (pair (identifier_hash_key_symbol) (symbol (simple_symbol)))
+  (pair (identifier_hash_key_symbol) (symbol (simple_symbol)))
+  (pair (identifier_hash_key_symbol) (symbol (simple_symbol)))
+  (pair (identifier_hash_key_symbol) (symbol (simple_symbol)))
+  (pair (identifier_hash_key_symbol) (symbol (simple_symbol)))
+  (pair (identifier_hash_key_symbol) (symbol (simple_symbol)))
+  (pair (identifier_hash_key_symbol) (symbol (simple_symbol)))
+  (pair (identifier_hash_key_symbol) (symbol (simple_symbol)))
+  (pair (identifier_hash_key_symbol) (symbol (simple_symbol)))
+  (pair (identifier_hash_key_symbol) (symbol (simple_symbol)))
+  (pair (identifier_hash_key_symbol) (symbol (simple_symbol)))
+  (pair (identifier_hash_key_symbol) (symbol (simple_symbol)))
+  (pair (identifier_hash_key_symbol) (symbol (simple_symbol)))
+  (pair (identifier_hash_key_symbol) (symbol (simple_symbol)))
+  (pair (identifier_hash_key_symbol) (symbol (simple_symbol)))
+  (pair (identifier_hash_key_symbol) (symbol (simple_symbol)))
+  (pair (identifier_hash_key_symbol) (symbol (simple_symbol)))
+  (pair (identifier_hash_key_symbol) (symbol (simple_symbol)))
+  (pair (identifier_hash_key_symbol) (symbol (simple_symbol)))
+  (pair (identifier_hash_key_symbol) (symbol (simple_symbol)))
+  (pair (identifier_hash_key_symbol) (symbol (simple_symbol)))
+  (pair (identifier_hash_key_symbol) (symbol (simple_symbol)))
+  (pair (identifier_hash_key_symbol) (symbol (simple_symbol)))
+  (pair (identifier_hash_key_symbol) (symbol (simple_symbol)))
+  (pair (identifier_hash_key_symbol) (symbol (simple_symbol)))
+  (pair (identifier_hash_key_symbol) (symbol (simple_symbol)))
+  (pair (identifier_hash_key_symbol) (symbol (simple_symbol)))
+  (pair (identifier_hash_key_symbol) (symbol (simple_symbol)))
+  (pair (identifier_hash_key_symbol) (symbol (simple_symbol)))
+  (pair (identifier_hash_key_symbol) (symbol (simple_symbol)))
+  (pair (identifier_hash_key_symbol) (symbol (simple_symbol)))
+  (pair (identifier_hash_key_symbol) (symbol (simple_symbol)))))
 
 ======================
 hash with keyword keys
@@ -1284,12 +1284,12 @@ hash with keyword keys
 
 (program
   (hash
-    (pair (symbol) (integer))
-    (pair (symbol) (integer))
+    (pair (identifier_hash_key_symbol) (integer))
+    (pair (identifier_hash_key_symbol) (integer))
     (pair (string (string_content)) (integer)))
   (hash
-    (pair (symbol) (integer))
-    (pair (symbol) (integer))
+    (pair (identifier_hash_key_symbol) (integer))
+    (pair (identifier_hash_key_symbol) (integer))
     (pair (string (string_content)) (integer))))
 
 ========================
@@ -1300,7 +1300,7 @@ hash with trailing comma
 
 ---
 
-(program (hash (pair (symbol) (integer))))
+(program (hash (pair (identifier_hash_key_symbol) (integer))))
 
 ========================
 hash initialization with hash splat
@@ -1311,8 +1311,8 @@ hash initialization with hash splat
 ---
 
 (program (hash
-  (pair (symbol) (integer))
-  (hash_splat_argument (hash (pair (symbol) (integer))))))
+  (pair (identifier_hash_key_symbol) (integer))
+  (hash_splat_argument (hash (pair (identifier_hash_key_symbol) (integer))))))
 
 ========================
 hash with line breaks and inline comments

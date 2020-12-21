@@ -60,7 +60,7 @@ module.exports = grammar({
     $._binary_minus,
     $._binary_star,
     $._singleton_class_left_angle_left_langle,
-    $._identifier_hash_key
+    $.identifier_hash_key_symbol
   ],
 
   extras: $ => [
@@ -881,9 +881,9 @@ module.exports = grammar({
       ),
       seq(
         field('key', choice(
-          alias($._identifier_hash_key, $.symbol),
-          alias($.identifier, $.symbol),
-          alias($.constant, $.symbol),
+          $.identifier_hash_key_symbol,
+          alias($.identifier, $.identifier_hash_key_symbol),
+          alias($.constant, $.identifier_hash_key_symbol),
           $.string
         )),
         token.immediate(':'),
@@ -909,18 +909,18 @@ module.exports = grammar({
   }
 });
 
-function sep (rule, separator) {
+function sep(rule, separator) {
   return optional(sep1(rule, separator));
 }
 
-function sep1 (rule, separator) {
+function sep1(rule, separator) {
   return seq(rule, repeat(seq(separator, rule)));
 }
 
-function commaSep1 (rule) {
+function commaSep1(rule) {
   return sep1(rule, ',');
 }
 
-function commaSep (rule) {
+function commaSep(rule) {
   return optional(commaSep1(rule));
 }

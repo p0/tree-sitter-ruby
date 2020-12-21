@@ -5858,13 +5858,8 @@
                 "type": "CHOICE",
                 "members": [
                   {
-                    "type": "ALIAS",
-                    "content": {
-                      "type": "SYMBOL",
-                      "name": "_identifier_hash_key"
-                    },
-                    "named": true,
-                    "value": "symbol"
+                    "type": "SYMBOL",
+                    "name": "identifier_hash_key_symbol"
                   },
                   {
                     "type": "ALIAS",
@@ -5873,7 +5868,7 @@
                       "name": "identifier"
                     },
                     "named": true,
-                    "value": "symbol"
+                    "value": "identifier_hash_key_symbol"
                   },
                   {
                     "type": "ALIAS",
@@ -5882,7 +5877,7 @@
                       "name": "constant"
                     },
                     "named": true,
-                    "value": "symbol"
+                    "value": "identifier_hash_key_symbol"
                   },
                   {
                     "type": "SYMBOL",
@@ -6095,7 +6090,7 @@
     },
     {
       "type": "SYMBOL",
-      "name": "_identifier_hash_key"
+      "name": "identifier_hash_key_symbol"
     }
   ],
   "inline": [],

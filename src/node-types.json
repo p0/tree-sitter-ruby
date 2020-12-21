@@ -2117,11 +2117,11 @@
             "named": true
           },
           {
-            "type": "string",
+            "type": "identifier_hash_key_symbol",
             "named": true
           },
           {
-            "type": "symbol",
+            "type": "string",
             "named": true
           }
         ]
@@ -3477,6 +3477,10 @@
   },
   {
     "type": "identifier",
+    "named": true
+  },
+  {
+    "type": "identifier_hash_key_symbol",
     "named": true
   },
   {
